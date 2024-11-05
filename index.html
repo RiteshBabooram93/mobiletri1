@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="./resources/ol.css">
+    <link rel="stylesheet" href="resources/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="resources/horsey.min.css">
+    <link rel="stylesheet" type="text/css" href="resources/ol3-search-layer.min.css">
+    <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
+    <link rel="stylesheet" href="./resources/qgis2web.css">
+    
+    <style>
+        /* General reset for body */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Flex container for responsive layout */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+
+        /* Header styling */
+        h1, h2, h3 {
+            margin: 5px;
+        }
+
+        /* Map container */
+        #map {
+            width: 100%;
+            height: 70vh;
+            max-width: 100%;
+        }
+
+        /* Tooltip and control styles */
+        .tooltip, .ol-control button {
+            background-color: #f8f8f8 !important;
+            color: #000000 !important;
+        }
+
+        /* Mobile specific styling */
+        @media (max-width: 768px) {
+            #map {
+                height: 50vh;
+            }
+
+            /* Adjust text size and padding for smaller screens */
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2, h3 {
+                font-size: 1em;
+            }
+
+            p {
+                font-size: 0.9em;
+                padding: 5px;
+            }
+        }
+    </style>
+
+    <title>PDRC Address Locator</title>
+</head>
+<body>
+    <!-- Information Section -->
+    <div class="container">
+        <font color="red">
+            <h1>PDRC ADDRESS LOCATOR WEB APP</h1>
+        </font>
+        
+        <font color="black">
+            <h2>Produced by the Office of the Chairman, Gowtam Maharaj, Penal Debe Regional Corporation</h2>
+            <h3>Cartographer: Ritesh Babooram</h3>
+            <h3>Date: 05-November-2024</h3>
+        </font>
+        
+        <p>Note: The data on this app is for informational use only.</p>
+    </div>
+
+    <!-- Map Container -->
+    <div id="map">
+        <div id="popup" class="ol-popup">
+            <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+            <div id="popup-content"></div>
+        </div>
+    </div>
+
+    <script src="resources/qgis2web_expressions.js"></script>
+    <script src="resources/polyfills.js"></script>
+    <script src="./resources/functions.js"></script>
+    <script src="./resources/ol.js"></script>
+    <script src="http://cdn.polyfill.io/v2/polyfill.min.js?features=Element.prototype.classList,URL"></script>
+    <script src="resources/horsey.min.js"></script>
+    <script src="resources/ol3-search-layer.js"></script>
+    <script src="./resources/ol-layerswitcher.js"></script>
+    <script src="layers/VictoriaCounty_3.js"></script>
+    <script src="layers/StPatrickCounty_4.js"></script>
+    <script src="layers/ElectoralDistricts_5.js"></script>
+    <script src="layers/Roads_6.js"></script>
+    <script src="styles/VictoriaCounty_3_style.js"></script>
+    <script src="styles/StPatrickCounty_4_style.js"></script>
+    <script src="styles/ElectoralDistricts_5_style.js"></script>
+    <script src="styles/Roads_6_style.js"></script>
+    <script src="./layers/layers.js" type="text/javascript"></script> 
+    <script src="./resources/Autolinker.min.js"></script>
+    <script src="./resources/qgis2web.js"></script>
+</body>
+</html>
